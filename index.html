@@ -5,18 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Computer and Mobile Repair Service</title>
-    <link rel="stylesheet" href="styles.css">  <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">  <!-- Link to External CSS -->
+    <script defer src="script.js"></script>     <!-- Link to External JavaScript -->
 </head>
 <body>
     <header>
         <h1>Computer and Mobile Repair Services</h1>
         <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="nav-menu">
+                <span class="hamburger">&#9776;</span>
+                <ul class="menu-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -24,26 +28,27 @@
         <div class="container">
             <h2>Welcome to Our Repair Service</h2>
             <p>We provide professional computer and mobile repair services for all your needs. Whether it's a software issue or a hardware problem, we can help!</p>
+            <input type="text" id="search-bar" placeholder="Search for services..." />
         </div>
     </section>
 
     <section id="services">
         <div class="container">
             <h2>Our Services</h2>
-            <div class="services">
-                <div class="service-item">
+            <div id="services-list" class="services">
+                <div class="service-item" data-name="Computer Repair">
                     <h3>Computer Repair</h3>
                     <p>We fix desktops, laptops, and all types of computer-related issues including hardware repairs, software installations, and upgrades.</p>
                 </div>
-                <div class="service-item">
+                <div class="service-item" data-name="Mobile Repair">
                     <h3>Mobile Repair</h3>
                     <p>Get your mobile device repaired, from screen replacements to battery issues. We cover all brands including iPhone, Samsung, and more.</p>
                 </div>
-                <div class="service-item">
+                <div class="service-item" data-name="Data Recovery">
                     <h3>Data Recovery</h3>
                     <p>Recover lost or deleted data from hard drives, USB drives, and mobile phones. We use advanced tools for effective recovery.</p>
                 </div>
-                <div class="service-item">
+                <div class="service-item" data-name="Virus Removal">
                     <h3>Virus Removal</h3>
                     <p>We remove malware and viruses from computers and mobile devices to keep your system safe and running smoothly.</p>
                 </div>
@@ -51,10 +56,23 @@
         </div>
     </section>
 
-    <section id="about">
+    <section id="testimonials">
         <div class="container">
-            <h2>About Us</h2>
-            <p>We are a trusted team of technicians with years of experience in the computer and mobile repair industry. Our mission is to provide affordable, fast, and reliable services to get your devices working as good as new!</p>
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p>"Excellent service! My laptop was fixed within a day, and it's working like new."</p>
+                    <span>- John Doe</span>
+                </div>
+                <div class="testimonial">
+                    <p>"Very professional and quick. Highly recommend for mobile repairs."</p>
+                    <span>- Jane Smith</span>
+                </div>
+                <div class="testimonial">
+                    <p>"Recovered all my data after my hard drive crashed. Lifesavers!"</p>
+                    <span>- Mark Lee</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -64,13 +82,12 @@
             <div class="contact-form">
                 <div class="contact-item">
                     <h3>Get in Touch</h3>
-                    <p>Feel free to reach out to us with any questions or to book a repair service.</p>
                     <p><strong>Email:</strong> info@repairservice.com</p>
                     <p><strong>Phone:</strong> +1 234 567 890</p>
                 </div>
                 <div class="contact-item">
                     <h3>Contact Form</h3>
-                    <form id="contact-form" method="POST">
+                    <form id="contact-form">
                         <label for="name">Your Name:</label>
                         <input type="text" id="name" name="name" required>
 
@@ -80,7 +97,7 @@
                         <label for="message">Your Message:</label>
                         <textarea id="message" name="message" rows="4" required></textarea>
 
-                        <button type="submit" id="submit-btn">Submit</button>
+                        <button type="submit">Submit</button>
                     </form>
                     <p id="response-msg" style="color:green; display:none;">Thank you for your message!</p>
                 </div>
@@ -88,10 +105,10 @@
         </div>
     </section>
 
+    <button id="scroll-to-top">Top</button>
+
     <footer>
         <p>&copy; 2025 Computer and Mobile Repair Service | All Rights Reserved</p>
     </footer>
-
-    <script src="script.js"></script> <!-- External JS -->
 </body>
 </html>
