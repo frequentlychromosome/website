@@ -93,43 +93,7 @@ nav {
     margin-bottom: 20px;
 }
 
-/* Testimonials Slider */
-.testimonial-slider {
-    display: flex;
-    overflow: hidden;
-    position: relative;
-}
 
-.testimonial {
-    min-width: 100%;
-    transition: transform 0.5s ease-in-out;
-    text-align: center;
-}
-
-.testimonial p {
-    font-style: italic;
-}
-
-.testimonial span {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-.testimonial {
-    position: absolute;
-    width: 100%; /* Full width for proper visibility */
-    top: 0;
-    left: 0;
-    transform: translateX(100%); /* Initially off-screen */
-    transition: transform 0.5s ease-in-out; /* Smooth sliding animation */
-}
-
-.testimonial-container {
-    position: relative;
-    overflow: hidden; /* Hide overflow to prevent overlapping issues */
-    height: auto; /* Adjust based on your content */
-}
 
 /* Scroll-to-Top Button */
 #scroll-to-top {
