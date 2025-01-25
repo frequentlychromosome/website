@@ -23,30 +23,7 @@ searchBar.addEventListener('input', () => {
     });
 });
 
-// Testimonials Auto-Slider
-// Testimonials Auto-Slider
-const testimonials = document.querySelectorAll('.testimonial');
-let currentSlide = 0;
 
-// Initialize testimonials: Hide all except the first one
-testimonials.forEach((testimonial, index) => {
-    testimonial.style.transition = 'transform 0.5s ease-in-out';
-    testimonial.style.transform = index === 0 ? 'translateX(0)' : 'translateX(100%)';
-});
-
-function showNextTestimonial() {
-    // Hide the current testimonial
-    testimonials[currentSlide].style.transform = 'translateX(-100%)';
-
-    // Update the current slide index
-    currentSlide = (currentSlide + 1) % testimonials.length;
-
-    // Show the next testimonial
-    testimonials[currentSlide].style.transform = 'translateX(0)';
-}
-
-// Run the slider at regular intervals
-setInterval(showNextTestimonial, 3000);
 
 // Scroll-to-Top Button
 const scrollToTopButton = document.getElementById('scroll-to-top');
