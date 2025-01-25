@@ -116,6 +116,21 @@ nav {
     font-weight: bold;
 }
 
+.testimonial {
+    position: absolute;
+    width: 100%; /* Full width for proper visibility */
+    top: 0;
+    left: 0;
+    transform: translateX(100%); /* Initially off-screen */
+    transition: transform 0.5s ease-in-out; /* Smooth sliding animation */
+}
+
+.testimonial-container {
+    position: relative;
+    overflow: hidden; /* Hide overflow to prevent overlapping issues */
+    height: auto; /* Adjust based on your content */
+}
+
 /* Scroll-to-Top Button */
 #scroll-to-top {
     position: fixed;
